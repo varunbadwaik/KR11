@@ -1,0 +1,63 @@
+import type { Event } from '../types';
+
+export const mockEvents: Event[] = [
+  {
+    id: 'Test Match',
+    title: 'Test Match',
+    type: 'TEST_MATCH',
+    status: 'UPCOMING',
+    startTime: '2026-05-14T09:15:00+05:30',
+    lockTime: '2026-05-14T09:10:00+05:30',
+    entryCoins: 25,
+    joined: false,
+    description: 'Runs over 5 trading days',
+    rules: ['Each quantity counts as 1 player slot.', 'Highest performers win coin rewards.'],
+  },
+  {
+    id: 'One Day',
+    title: 'One Day',
+    type: 'ONE_DAY',
+    status: 'LIVE',
+    startTime: '2026-05-13T09:15:00+05:30',
+    lockTime: '2026-05-13T09:10:00+05:30',
+    entryCoins: 25,
+    joined: false,
+    description: '9:15 AM - 3:15 PM',
+    rules: ['Buy prediction and Sell prediction are fantasy predictions.', 'Highest performers win coin rewards.'],
+  },
+  {
+    id: 'T20',
+    title: 'T20',
+    type: 'T20',
+    status: 'UPCOMING',
+    startTime: '2026-05-13T12:15:00+05:30',
+    lockTime: '2026-05-13T12:10:00+05:30',
+    entryCoins: 20,
+    joined: false,
+    description: '3 hour sessions',
+  },
+  {
+    id: 'Super Over',
+    title: 'Super Over',
+    type: 'SUPER_OVER',
+    status: 'UPCOMING',
+    startTime: '2026-05-13T15:15:00+05:30',
+    lockTime: '2026-05-13T15:10:00+05:30',
+    entryCoins: 10,
+    joined: false,
+    description: 'Results announced at EOD',
+  },
+  {
+    id: 'Bowl Out',
+    title: 'Bowl Out',
+    type: 'BOWL_OUT',
+    status: 'UPCOMING',
+    startTime: '2026-05-13T15:15:00+05:30',
+    lockTime: '2026-05-13T15:10:00+05:30',
+    entryCoins: 10,
+    joined: false,
+    description: 'Reverse challenge',
+  },
+];
+
+export const mockEventTitles = mockEvents.map((event) => event.title);
