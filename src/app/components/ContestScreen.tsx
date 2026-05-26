@@ -171,7 +171,7 @@ export function ContestScreen({ eventName, onBack, onJoinContest }: ContestScree
       </div>
 
       {/* ─── Create Contest Floating Rounded Footer ─── */}
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 w-full max-w-[480px] px-5 z-30">
+      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 w-full max-w-[480px] px-5 z-30">
         <button
           onClick={() => {
             toast.success("Create Contest Window Opened (Demo Mode)", {

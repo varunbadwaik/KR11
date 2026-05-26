@@ -13,6 +13,15 @@ export function normalizeApiError(error: unknown): ApiError {
     return { message: error.message };
   }
 
+  if (error && typeof error === 'object') {
+    const err = error as Record<string, unknown>;
+    return {
+      message: typeof err.message === 'string' ? err.message : 'Something went wrong',
+      status: typeof err.status === 'number' ? err.status : undefined,
+      code: typeof err.code === 'string' ? err.code : undefined,
+    };
+  }
+
   return { message: 'Something went wrong' };
 }
 
