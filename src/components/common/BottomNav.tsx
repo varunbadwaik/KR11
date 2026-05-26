@@ -15,7 +15,7 @@ const tabs: { id: NavTab; label: string; icon: typeof Home }[] = [
 
 export function BottomNav({ active = 'home', onNavigate }: BottomNavProps) {
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-[440px] z-40">
+    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] z-40">
       <div className="bg-white/90 backdrop-blur-lg border border-white/60 rounded-[24px] flex items-center justify-around px-6 py-2.5 shadow-premium-lg">
         {tabs.map((tab) => {
           const isActive = active === tab.id;
