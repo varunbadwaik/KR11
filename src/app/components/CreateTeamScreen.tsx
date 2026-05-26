@@ -515,7 +515,7 @@ export function CreateTeamScreen({ eventName, eventId, onBack }: CreateTeamScree
       )}
 
       {/* ─── Replicated Rounded Floating Preview & Submit Footer ─── */}
-      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 w-full max-w-[480px] px-5 z-40">
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 w-full max-w-[480px] px-5 z-40">
         <div className="w-full bg-[#180F69] rounded-[24px] p-4 flex flex-col gap-3 shadow-[0_12px_36px_-6px_rgba(24,15,105,0.35),0_4px_16px_rgba(24,15,105,0.15)]">
           
           {viewMode === 'list' ? (
