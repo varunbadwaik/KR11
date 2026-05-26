@@ -20,10 +20,14 @@ interface CompanySummaryModalProps {
 export function CompanySummaryModal({ company, onClose, onViewChart }: CompanySummaryModalProps) {
   const getRiskColor = (level: string) => {
     switch (level) {
-      case 'Low': return 'text-[#14B86A] bg-[#E6F7F0]';
-      case 'Medium': return 'text-[#F5A400] bg-[#FFF4D8]';
-      case 'High': return 'text-[#E5484D] bg-[#FFF0F0]';
-      default: return 'text-[#667085] bg-[#F4F7FB]';
+      case 'Low':
+        return 'text-[#14B86A] bg-[#E6F7F0]';
+      case 'Medium':
+        return 'text-[#F5A400] bg-[#FFF4D8]';
+      case 'High':
+        return 'text-[#E5484D] bg-[#FFF0F0]';
+      default:
+        return 'text-[#667085] bg-[#F4F7FB]';
     }
   };
 
@@ -58,8 +62,11 @@ export function CompanySummaryModal({ company, onClose, onViewChart }: CompanySu
               <span className="text-2xl font-bold text-[#101828]">{company.value}</span>
               <span className="text-sm text-[#667085]">Coins</span>
             </div>
-            <p className={`text-sm font-semibold ${company.percentage >= 0 ? 'text-[#14B86A]' : 'text-[#E5484D]'}`}>
-              {company.percentage >= 0 ? '+' : ''}{company.percentage.toFixed(2)}%
+            <p
+              className={`text-sm font-semibold ${company.percentage >= 0 ? 'text-[#14B86A]' : 'text-[#E5484D]'}`}
+            >
+              {company.percentage >= 0 ? '+' : ''}
+              {company.percentage.toFixed(2)}%
             </p>
           </div>
         </div>
@@ -73,7 +80,9 @@ export function CompanySummaryModal({ company, onClose, onViewChart }: CompanySu
         {/* Risk Level */}
         <div className="mb-6">
           <h3 className="text-base font-bold text-[#101828] mb-2">Risk Level</h3>
-          <span className={`inline-block px-3 py-1.5 text-sm font-semibold rounded-full ${getRiskColor(company.riskLevel)}`}>
+          <span
+            className={`inline-block px-3 py-1.5 text-sm font-semibold rounded-full ${getRiskColor(company.riskLevel)}`}
+          >
             {company.riskLevel} Risk
           </span>
         </div>

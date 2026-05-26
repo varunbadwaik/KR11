@@ -32,10 +32,7 @@ export function BottomNav({ active = 'home', onNavigate }: BottomNavProps) {
               aria-label={tab.label}
               aria-current={isActive ? 'page' : undefined}
             >
-              <Icon
-                className="w-5.5 h-5.5"
-                strokeWidth={isActive ? 2.5 : 2}
-              />
+              <Icon className="w-5.5 h-5.5" strokeWidth={isActive ? 2.5 : 2} />
             </button>
           );
         })}

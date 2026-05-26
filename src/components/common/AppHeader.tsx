@@ -39,17 +39,12 @@ export function AppHeader({
 
       {/* Center */}
       <div className="flex-1 flex justify-center">
-        {centerContent ?? (
-          title && (
-            <h1 className="text-lg font-bold text-[#101828] truncate">{title}</h1>
-          )
-        )}
+        {centerContent ??
+          (title && <h1 className="text-lg font-bold text-[#101828] truncate">{title}</h1>)}
       </div>
 
       {/* Right */}
-      <div className="flex items-center gap-2 min-w-[40px] justify-end">
-        {rightContent}
-      </div>
+      <div className="flex items-center gap-2 min-w-[40px] justify-end">{rightContent}</div>
     </div>
   );
 }

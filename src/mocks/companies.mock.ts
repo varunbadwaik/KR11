@@ -101,7 +101,8 @@ export const mockCompanies: Company[] = [
     coinValue: 250,
     movementPercent: 1.92,
     movementDirection: 'UP',
-    description: 'Global technology giant specializing in internet services, search, and cloud computing.',
+    description:
+      'Global technology giant specializing in internet services, search, and cloud computing.',
     riskLabel: 'Low',
   },
   {
@@ -112,7 +113,8 @@ export const mockCompanies: Company[] = [
     coinValue: 250,
     movementPercent: -0.92,
     movementDirection: 'DOWN',
-    description: 'Global consumer electronics leader known for mobile devices and software services.',
+    description:
+      'Global consumer electronics leader known for mobile devices and software services.',
     riskLabel: 'Low',
   },
   {
@@ -127,14 +129,49 @@ export const mockCompanies: Company[] = [
 ];
 
 export const mockTeamCompanies: TeamCompanyMock[] = [
-  { id: 'reliance', name: 'Reliance', value: 250, change: 18.40, percentage: 0.76, sector: 'Energy - Telecom' },
-  { id: 'tata-motors', name: 'Tata', value: 250, change: -4.10, percentage: -0.55, sector: 'Automobile' },
-  { id: 'google', name: 'Google', value: 250, change: 4.80, percentage: 1.92, sector: 'Internet Services' },
-  { id: 'infosys', name: 'Infosys', value: 250, change: -8.30, percentage: -0.58, sector: 'IT Services' },
-  { id: 'apple', name: 'Apple', value: 250, change: -2.30, percentage: -0.92, sector: 'Consumer Electronics' },
-  { id: 'zomato', name: 'ZOMATO', value: 250, change: 2.30, percentage: 1.25, sector: 'Food Tech' },
-  { id: 'ioc', name: 'IOC', value: 250, change: -1.20, percentage: -0.72, sector: 'Oil & Gas' },
-  { id: 'swiggy', name: 'SWIGGY', value: 250, change: 1.80, percentage: 4.32, sector: 'Food Tech' },
+  {
+    id: 'reliance',
+    name: 'Reliance',
+    value: 250,
+    change: 18.4,
+    percentage: 0.76,
+    sector: 'Energy - Telecom',
+  },
+  {
+    id: 'tata-motors',
+    name: 'Tata',
+    value: 250,
+    change: -4.1,
+    percentage: -0.55,
+    sector: 'Automobile',
+  },
+  {
+    id: 'google',
+    name: 'Google',
+    value: 250,
+    change: 4.8,
+    percentage: 1.92,
+    sector: 'Internet Services',
+  },
+  {
+    id: 'infosys',
+    name: 'Infosys',
+    value: 250,
+    change: -8.3,
+    percentage: -0.58,
+    sector: 'IT Services',
+  },
+  {
+    id: 'apple',
+    name: 'Apple',
+    value: 250,
+    change: -2.3,
+    percentage: -0.92,
+    sector: 'Consumer Electronics',
+  },
+  { id: 'zomato', name: 'ZOMATO', value: 250, change: 2.3, percentage: 1.25, sector: 'Food Tech' },
+  { id: 'ioc', name: 'IOC', value: 250, change: -1.2, percentage: -0.72, sector: 'Oil & Gas' },
+  { id: 'swiggy', name: 'SWIGGY', value: 250, change: 1.8, percentage: 4.32, sector: 'Food Tech' },
 ];
 
 export const mockCompanySummaries: CompanySummaryMock[] = [
@@ -145,7 +182,12 @@ export const mockCompanySummaries: CompanySummaryMock[] = [
     summary: 'Large diversified company across energy, telecom, retail, and digital services.',
     percentage: 0.76,
     riskLevel: 'Medium',
-    keyFactors: ['Crude oil prices', 'Jio subscriber growth', 'Retail expansion', 'Quarterly earnings'],
+    keyFactors: [
+      'Crude oil prices',
+      'Jio subscriber growth',
+      'Retail expansion',
+      'Quarterly earnings',
+    ],
   },
   {
     name: 'TATA MOTORS',
@@ -187,19 +229,31 @@ export const mockCompanySummaries: CompanySummaryMock[] = [
     name: 'Google',
     sector: 'Internet Services',
     value: 250,
-    summary: 'Global technology giant specializing in search, advertising, cloud computing, and hardware.',
+    summary:
+      'Global technology giant specializing in search, advertising, cloud computing, and hardware.',
     percentage: 1.92,
     riskLevel: 'Low',
-    keyFactors: ['Ad revenue growth', 'AI search integration', 'Cloud computing momentum', 'Regulatory scrutiny'],
+    keyFactors: [
+      'Ad revenue growth',
+      'AI search integration',
+      'Cloud computing momentum',
+      'Regulatory scrutiny',
+    ],
   },
   {
     name: 'Apple',
     sector: 'Consumer Electronics',
     value: 250,
-    summary: 'Global consumer electronics leader known for premium devices, services, and software ecosystem.',
+    summary:
+      'Global consumer electronics leader known for premium devices, services, and software ecosystem.',
     percentage: -0.92,
     riskLevel: 'Low',
-    keyFactors: ['iPhone shipments', 'Services ecosystem growth', 'Supply chain stability', 'Hardware innovations'],
+    keyFactors: [
+      'iPhone shipments',
+      'Services ecosystem growth',
+      'Supply chain stability',
+      'Hardware innovations',
+    ],
   },
 ];
 

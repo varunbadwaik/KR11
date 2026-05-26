@@ -23,7 +23,10 @@ export const mockEvents: Event[] = [
     entryCoins: 25,
     joined: false,
     description: '9:15 AM - 3:15 PM',
-    rules: ['Buy prediction and Sell prediction are fantasy predictions.', 'Highest performers win coin rewards.'],
+    rules: [
+      'Buy prediction and Sell prediction are fantasy predictions.',
+      'Highest performers win coin rewards.',
+    ],
   },
   {
     id: 'T20',

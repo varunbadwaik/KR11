@@ -23,12 +23,13 @@ export const companiesService = {
   // TODO FastAPI: GET /api/companies/:companyId
   getCompanyById(companyId: string) {
     return Promise.resolve(
-      mockCompanies.find((company) => company.id === companyId || company.symbol === companyId) ?? null,
+      mockCompanies.find((company) => company.id === companyId || company.symbol === companyId) ??
+        null,
     );
   },
 
   // TODO FastAPI: GET /api/companies/:companyId/chart
-  getCompanyChart(_companyId: string, _range = '1D') {
+  getCompanyChart(_companyId: string, _range?: string) {
     return Promise.resolve(mockCompanyChart);
   },
 };

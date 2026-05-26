@@ -73,9 +73,11 @@ function NotificationItem({ icon, title, description, time, unread }: Notificati
   return (
     <div className={`rounded-2xl p-4 ${unread ? 'bg-[#EAF2FF]' : 'bg-[#F4F7FB]'}`}>
       <div className="flex gap-3">
-        <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 ${
-          unread ? 'bg-white' : 'bg-white/50'
-        }`}>
+        <div
+          className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 ${
+            unread ? 'bg-white' : 'bg-white/50'
+          }`}
+        >
           {icon}
         </div>
         <div className="flex-1">

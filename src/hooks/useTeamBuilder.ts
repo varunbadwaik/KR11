@@ -18,7 +18,11 @@ function getCompanyId(company: TeamBuilderCompany) {
   return company.id ?? company.symbol ?? company.name.toLowerCase().replace(/\s+/g, '-');
 }
 
-function toTeamItem(company: TeamBuilderCompany, action: FantasyPredictionAction, quantity: number): TeamItem {
+function toTeamItem(
+  company: TeamBuilderCompany,
+  action: FantasyPredictionAction,
+  quantity: number,
+): TeamItem {
   const companyId = getCompanyId(company);
   const coinValue = company.coinValue ?? company.value;
 
@@ -64,7 +68,7 @@ const initialItems: TeamItem[] = [
     quantity: 1,
     coinValue: 250,
     totalCoins: 250,
-  }
+  },
 ];
 
 export function useTeamBuilder(maxSlots = TEAM_MAX_SLOTS) {
@@ -145,11 +149,7 @@ export function useTeamBuilder(maxSlots = TEAM_MAX_SLOTS) {
     setTeamMessage(nextTotalSlots);
   };
 
-  const updateQuantity = (
-    companyId: string,
-    action: FantasyPredictionAction,
-    quantity: number,
-  ) => {
+  const updateQuantity = (companyId: string, action: FantasyPredictionAction, quantity: number) => {
     if (quantity <= 0) {
       removeItem(companyId, action);
       return true;

@@ -29,15 +29,24 @@ export function CoinWalletPopup({ onClose }: CoinWalletPopupProps) {
 
         {/* Actions */}
         <div className="space-y-3 mb-6">
-          <button 
-            onClick={() => toast.info("Add Coins (Demo Mode)", { description: "Fantasy coins are allocated for prediction gameplay. Purchase is mock-only." })}
+          <button
+            onClick={() =>
+              toast.info('Add Coins (Demo Mode)', {
+                description:
+                  'Fantasy coins are allocated for prediction gameplay. Purchase is mock-only.',
+              })
+            }
             className="w-full py-4 bg-[#F5A400] text-white text-base font-semibold rounded-full hover:bg-[#E69500] transition-colors flex items-center justify-center gap-2"
           >
             <Plus className="w-5 h-5" />
             Add Coins
           </button>
-          <button 
-            onClick={() => toast.info("Coin History (Demo Mode)", { description: "Transaction history is coming soon." })}
+          <button
+            onClick={() =>
+              toast.info('Coin History (Demo Mode)', {
+                description: 'Transaction history is coming soon.',
+              })
+            }
             className="w-full py-4 bg-[#F4F7FB] text-[#101828] text-base font-semibold rounded-full hover:bg-[#E5E7EB] transition-colors flex items-center justify-center gap-2"
           >
             <History className="w-5 h-5" />
@@ -86,8 +95,11 @@ function TransactionItem({ title, amount, date, type }: TransactionItemProps) {
         <p className="text-sm font-semibold text-[#101828]">{title}</p>
         <p className="text-xs text-[#667085]">{date}</p>
       </div>
-      <div className={`text-sm font-bold ${type === 'credit' ? 'text-[#14B86A]' : 'text-[#E5484D]'}`}>
-        {type === 'credit' ? '+' : '-'}{amount} Coins
+      <div
+        className={`text-sm font-bold ${type === 'credit' ? 'text-[#14B86A]' : 'text-[#E5484D]'}`}
+      >
+        {type === 'credit' ? '+' : '-'}
+        {amount} Coins
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { mockCompanies, mockCompanySummaries, mockTeamCompanies } from '../../mocks';
+import { mockCompanies, mockCompanySummaries, mockTeamCompanies } from '../mocks';
 
 export interface CompanyDetailViewModel {
   id: string;
@@ -31,10 +31,11 @@ export function findCompanyDetail(companyId: string | undefined): CompanyDetailV
   }
 
   const summary = mockCompanySummaries.find(
-    (company) => normalize(company.name) === normalize(baseCompany.name)
+    (company) => normalize(company.name) === normalize(baseCompany.name),
   );
   const teamCompany = mockTeamCompanies.find(
-    (company) => company.id === baseCompany.id || normalize(company.name) === normalize(baseCompany.name)
+    (company) =>
+      company.id === baseCompany.id || normalize(company.name) === normalize(baseCompany.name),
   );
 
   return {

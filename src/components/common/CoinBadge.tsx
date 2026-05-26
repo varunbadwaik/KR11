@@ -9,7 +9,7 @@ interface CoinBadgeProps {
 
 export function CoinBadge({ balance, onClick, size = 'md', variant = 'light' }: CoinBadgeProps) {
   const Component = onClick ? 'button' : 'div';
-  
+
   if (variant === 'dark') {
     return (
       <Component
@@ -24,9 +24,11 @@ export function CoinBadge({ balance, onClick, size = 'md', variant = 'light' }: 
             {balance}
           </span>
         </div>
-        <div className={`rounded-full bg-[#E5484D] text-white flex items-center justify-center ${
-          size === 'sm' ? 'w-6 h-6' : 'w-8 h-8'
-        }`}>
+        <div
+          className={`rounded-full bg-[#E5484D] text-white flex items-center justify-center ${
+            size === 'sm' ? 'w-6 h-6' : 'w-8 h-8'
+          }`}
+        >
           <Plus className={size === 'sm' ? 'w-3.5 h-3.5' : 'w-4.5 h-4.5'} strokeWidth={3} />
         </div>
       </Component>
